@@ -30,15 +30,17 @@ const Add = () => {
   return (
     <div>
       <h1>Aggiungi nuovo libro</h1>
-      <input placeholder="title" name="title" onChange={handleChange}></input>
-      <input
-        placeholder="description"
-        name="description"
-        onChange={handleChange}
-      ></input>
-      <input placeholder="cover" name="cover" onChange={handleChange}></input>
-      <input placeholder="price" name="price" onChange={handleChange}></input>
-      <button onClick={handleClick}>Aggiungi</button>
+      <div className="formAdd">
+        <input placeholder="title" name="title" onChange={handleChange}></input>
+        <input
+          placeholder="description"
+          name="description"
+          onChange={handleChange}
+        ></input>
+        <input placeholder="cover" name="cover" onChange={handleChange}></input>
+        <input placeholder="price" name="price" onChange={handleChange}></input>
+        <button onClick={handleClick}>Aggiungi</button>
+      </div>
     </div>
   );
 };

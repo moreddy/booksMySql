@@ -1,0 +1,52 @@
+.App {
+  height: 100 vh;
+  padding: 100px 1300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.books {
+  display: flex;
+  gap: 10px;
+}
+
+.book {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.delete {
+  border: none;
+  padding: 8px 14px;
+  background-color: rgb(241, 175, 175);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.update {
+  border: none;
+  padding: 8px 14px;
+  background-color: rgb(175, 241, 202);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.addButton {
+  border: none;
+  padding: 18px 24px;
+  background-color: lightsteelblue;
+  border-radius: 5px;
+  cursor: default;
+  text-decoration: none;
+  position: relative;
+  top: 50px;
+}
