@@ -74,3 +74,16 @@ app.post("/books", (req, res) => {
     }
   });
 });
+
+// DELETE
+app.delete("/books/:id", (req, res) => {
+  const bookId = req.params.id;
+  const query = "DELETE FROM test.books WHERE id=?";
+  db.query(query, [bookId], (err, data) => {
+    if (err) {
+      return req.json(err);
+    } else {
+      return res.json(data);
+    }
+  });
+});
