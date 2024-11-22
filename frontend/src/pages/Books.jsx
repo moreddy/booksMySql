@@ -26,6 +26,7 @@ const Books = () => {
       console.log(error);
     }
   };
+
   return (
     <div className="BB">
       <h1>Scotu Library</h1>
@@ -36,15 +37,24 @@ const Books = () => {
             <h1>{book.title}</h1>
             <p>{book.description}</p>
             <span>{book.price}</span>
-            <button className="delete" on onClick={() => handleDelete(book.id)}>
+            <button className="delete" onClick={() => handleDelete(book.id)}>
               Delete
             </button>
-            <button className="update">Update</button>
+            <button className="update">
+              <Link
+                to={`/update/${book.id}`}
+                style={{ color: "inherit", textDecoration: "none" }}
+              >
+                Update
+              </Link>
+            </button>
           </div>
         ))}
       </div>
       <button className="addButton">
-        <Link to={"/add"}>Aggiungi nuovo libro</Link>
+        <Link to={"/add"} style={{ color: "inherit", textDecoration: "none" }}>
+          Aggiungi nuovo libro
+        </Link>
       </button>
     </div>
   );
